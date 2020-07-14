@@ -1,0 +1,20 @@
+<h1>Ler arquivo CNAB</h1>
+
+<form action="">
+  <div class="file-icon"></div>
+  <div class="file"></div>
+</form>
+
+<div class="box">
+  <%= form_with(url: {action: :upload}, multipart: true, id: 'upload') do |f| %>
+    <ul>
+      <li>
+        <label for="archive">Selecione o arquivo</label>
+        <%= file_field_tag 'archivearquivo', id: 'archive'%>
+      </li>
+      <li>
+        <%= f.submit "Enviar", id: 'send-file' %>
+      </li>
+    </ul>
+  <% end %>
+</div>
