@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  payment: one
+  store: one
+  cpf: MyString
+  card: MyString
+  date: 2020-07-14
+  time: 2020-07-14 15:48:32
+  price: 9.99
+
+two:
+  payment: two
+  store: two
+  cpf: MyString
+  card: MyString
+  date: 2020-07-14
+  time: 2020-07-14 15:48:32
+  price: 9.99
