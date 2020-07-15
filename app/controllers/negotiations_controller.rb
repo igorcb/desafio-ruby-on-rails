@@ -13,4 +13,5 @@ class NegotiationsController < ApplicationController
       format.js
     end
   end
+
 end

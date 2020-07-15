@@ -82,7 +82,7 @@ th {
     white-space: nowrap;
 }
 tbody th {
-	background-color: #2ea879;
+	background-color: #e992b9;
 }
 tbody tr:nth-child(2n-1) {
     background-color: #dfc8ca;
@@ -90,4 +90,7 @@ tbody tr:nth-child(2n-1) {
 }
 tbody tr:hover {
     background-color: #ca9ca2;
+}
+tfoot {
+    font-weight: bold;
 }

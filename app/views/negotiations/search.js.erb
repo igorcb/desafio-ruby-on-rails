@@ -1,2 +1,4 @@
 document.getElementById("result_negotiations").innerHTML='';
-document.getElementById("result_negotiations").innerHTML="<table class='table table-striped'><thead><%= j(render(:partial => 'header')) %></thead><tbody><%= j(render @negotiations) %></tbody></table>"
+document.getElementById("result_negotiations").innerHTML="<table class='table table-striped'><thead><%= j(render(:partial => 'header')) %></thead><tbody><%= j(render @negotiations) %></tbody><tfoot><tr><td>Saldo</td><td></td><td></td><td><%= @negotiations.sum(:price)%></td></tr></tfoot></table>"
+
+
