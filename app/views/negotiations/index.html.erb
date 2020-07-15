@@ -1,0 +1,31 @@
+  <div class="box">
+    <table>
+      <thead>
+        <th>Tipo</th>
+        <th>Data</th>
+        <th>Hora</th>
+        <th>Valor</th>
+        <th>CPF</th>
+        <th>Cartão</th>
+        <th>Loja</th>
+        <th>Dono</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <% if @negotiations.present? %>
+          <% @negotiations.each do |negotiation| %>
+            <tr>
+              <td><%= negotiation.payment.description %>[<%= negotiation.payment.signal %>]</td>
+              <td><%= negotiation.date.strftime("%d/%m/%Y")  %></td>
+              <td><%= negotiation.time.strftime("%H:%M:%S") %></td>
+              <td><%= negotiation.price %></td>
+              <td><%= negotiation.cpf %></td>
+              <td><%= negotiation.card %></td>
+              <td><%= negotiation.store.name %></td>
+              <td><%= negotiation.store.owner %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
