@@ -5,7 +5,6 @@ class HomeController < ApplicationController
 
   def upload
     result = Cnab::ReadService.new(params[:archive]).call
-    #render :listing
     redirect_to negotiations_path
   end
 
