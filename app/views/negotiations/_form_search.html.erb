@@ -1,0 +1,7 @@
+<%= search_form_for @q, remote: true, url: search_negotiations_path, :method => :get do |f| %>
+  <div>
+    <%= f.label :store_id_eq, "Infome a Loja" %><br>
+    <%= f.select(:store_id_eq, Store.order(:name).collect {|c| [c.name, c.id]}, {prompt: ""} ) %>
+    <%= f.submit "Pesquisar" %>
+  </div>
+<% end %>

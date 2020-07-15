@@ -2,44 +2,21 @@
   <h1>Fazer um nav bar</h1>
 </header>
 
-  <div class="box">
 
-    <h3>Selecionar uma Loja</h3>
-    <select class="store" name="store">
-      <option value="">BAT DO JOAO</option>
-      <option value="">LOJA DO Ó - MATRIZ</option>
-      <option value="">MERCADO DA AVENIDA</option>
-      <option value="">MERCEARIA 3 IRMÃOS</option>
-    </select>
-    <button type="button" name="button">Pesquisar</button>
+
+  <div class="box">
+    <%= render "form_search" %>
     <hr>
-    <table>
-      <thead>
-        <th>Tipo</th>
-        <th>Data</th>
-        <th>Hora</th>
-        <th>Valor</th>
-        <th>CPF</th>
-        <th>Cartão</th>
-        <th>Loja</th>
-        <th>Dono</th>
-        <th></th>
-      </thead>
-      <tbody>
-        <% if @negotiations.present? %>
-          <% @negotiations.each do |negotiation| %>
-            <tr>
-              <td><%= negotiation.payment.description %>[<%= negotiation.payment.signal %>]</td>
-              <td><%= negotiation.date.strftime("%d/%m/%Y")  %></td>
-              <td><%= negotiation.time.strftime("%H:%M:%S") %></td>
-              <td><%= negotiation.price %></td>
-              <td><%= negotiation.cpf %></td>
-              <td><%= negotiation.card %></td>
-              <td><%= negotiation.store.name %></td>
-              <td><%= negotiation.store.owner %></td>
-            </tr>
-          <% end %>
-        <% end %>
-      </tbody>
-    </table>
+    <div id="result">
+      <div id="result_negotiations">
+        <table>
+          <thead>
+            <%= render 'header' %>
+          </thead>
+          <tbody>
+            <%= render @negotiations %>
+          </tbody>
+        </table>
+        </div>
+    </div>
   </div>
