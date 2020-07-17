@@ -1,25 +1,21 @@
-<header class="codrops-header">
-  <h1>Fazer um nav bar</h1>
-</header>
+<%= render 'shared/header' %>
 
-
-
-  <div class="box">
-    <%= render "form_search" %>
-    <hr>
-    <div id="result">
-      <div id="result_negotiations">
-        <table>
-          <thead>
-            <%= render 'header' %>
-          </thead>
-          <tbody>
-            <%= render @negotiations %>
-          </tbody>
-          <tfoot>
-            <%= render 'footer' %>
-          </tfoot>
-        </table>
-        </div>
-    </div>
+<div class="box">
+  <%= render "form_search" %>
+  <hr>
+  <div id="result">
+    <div id="result_negotiations">
+      <table>
+        <thead>
+          <%= render 'header' %>
+        </thead>
+        <tbody>
+          <%= render @negotiations %>
+        </tbody>
+        <tfoot>
+          <%= render 'footer' %>
+        </tfoot>
+      </table>
+      </div>
   </div>
+</div>
