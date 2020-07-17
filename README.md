@@ -27,8 +27,10 @@ Ler os dados de um [arquivo CNAB](https://github.com/ByCodersTec/desafio-ruby-on
 
 # Para rodar o app em localhost
 * Deve ter o docker e docker-compose instalado
-No terminal digite
+* No terminal digite
 > git clone git@github.com:igorcb/desafio-ruby-on-rails.git
+
+* Fazer o build do projeto
 > docker-compose up --build
 
 * Criar Banco de Dados
