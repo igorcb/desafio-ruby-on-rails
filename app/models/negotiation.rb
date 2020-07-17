@@ -3,8 +3,11 @@ class Negotiation < ApplicationRecord
   belongs_to :store
   validate :cpf, :card, :date, :time, :price
 
-  def self.ransackable_attributes(auth_object = nil)
-    ['id', 'cpf', 'store_iq']
+  def self.ransackable_attributes(_auth_object = nil)
+    %w[id cpf store_iq]
   end
 
+  def self.calculate_balance(negotiations)
+    negotiations.where(payments: { signal: '+' }).sum(:price) - negotiations.where(payments: { signal: '-' }).sum(:price)
+  end
 end

@@ -17,12 +17,7 @@
             <%= render @negotiations %>
           </tbody>
           <tfoot>
-            <tr>
-              <td>Saldo</td>
-              <td></td>
-              <td></td>
-              <td><%= @negotiations.sum(:price)%></td>
-            </tr>
+            <%= render 'footer' %>
           </tfoot>
         </table>
         </div>

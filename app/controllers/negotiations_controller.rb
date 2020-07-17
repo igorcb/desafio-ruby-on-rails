@@ -2,8 +2,8 @@ class NegotiationsController < ApplicationController
   respond_to :html, :js
 
   def index
-    @q = Negotiation.ransack(params[:q])
-    @negotiations = Negotiation.all
+    @q = Negotiation.includes(:payment, :store).ransack(params[:q])
+    @negotiations = @q.result
   end
 
   def search
@@ -13,5 +13,4 @@ class NegotiationsController < ApplicationController
       format.js
     end
   end
-
 end

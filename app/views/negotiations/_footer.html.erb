@@ -1,0 +1,6 @@
+<tr>
+  <td>Saldo</td>
+  <td></td>
+  <td></td>
+  <td><%= number_to_currency(Negotiation.calculate_balance(@negotiations), unit: "R$ ", separator: ",", delimiter: "") %> </td>
+</tr>
