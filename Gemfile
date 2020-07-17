@@ -39,6 +39,7 @@ gem 'ransack'
 gem 'responders'
 gem 'devise'
 gem 'pg'
+gem 'omniauth-github'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +47,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'database_cleaner-active_record'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
+  gem 'dotenv-rails'
 end
 
 group :development do

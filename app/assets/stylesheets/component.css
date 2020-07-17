@@ -94,3 +94,9 @@ tbody tr:hover {
 tfoot {
     font-weight: bold;
 }
+
+.github {
+    margin: 0px;
+    padding: 0px;
+}
+  
