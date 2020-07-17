@@ -1,24 +1,45 @@
-# README
+# Desafio de programação - _BYCODERS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Descrição do projeto
+Ler os dados de um [arquivo CNAB](https://github.com/ByCodersTec/desafio-ruby-on-rails/blob/master/CNAB.txt), normalizar os dados e armazenar em um banco de dados
 
-Things you may want to cover:
+# Funcionalidades
+* Entrar com um login e senha
 
-* Ruby version
+* Tela para upload do arquivo
 
-* System dependencies
+* Listagem dos dados do arquivo, armazenado no banco de dados
 
-* Configuration
+# Versões utilizadas
+* Ruby: 2.5.3
+* Postgres: 9.6
+* Docker: 19.03.12
+* Docker Compose: 1.16.1
 
-* Database creation
+# Gems utilizadas
+* ransack
+* devise
+* pg
+* rspec-rails
+* database_cleaner-active_record
+* rails-controller-testing
+* factory_bot_rails
 
-* Database initialization
+# Para rodar o app em localhost
+* Deve ter o docker e docker-compose instalado
+No terminal digite
+> git clone git@github.com:igorcb/desafio-ruby-on-rails.git
+> docker-compose up --build
 
-* How to run the test suite
+* Criar Banco de Dados
+> docker-compose run --rm web rails db:create
 
-* Services (job queues, cache servers, search engines, etc.)
+* Executar as migrations
+> docker-compose run --rm web rails db:migration
 
-* Deployment instructions
+* Rodar o arquivos seed para popular algumas tabelas.
+> docker-compose run --rm web rails db:seed
 
-* ...
+* Abrir o browser (navegador)
+> localhost:3000
+
