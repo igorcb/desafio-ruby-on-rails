@@ -12,6 +12,7 @@ Ler os dados de um [arquivo CNAB](https://github.com/ByCodersTec/desafio-ruby-on
 
 # Versões utilizadas
 * Ruby: 2.5.3
+* Rails: 5.2.3
 * Postgres: 9.6
 * Docker: 19.03.12
 * Docker Compose: 1.16.1
