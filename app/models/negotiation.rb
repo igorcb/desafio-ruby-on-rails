@@ -1,7 +1,7 @@
 class Negotiation < ApplicationRecord
   belongs_to :payment
   belongs_to :store
-  validate :cpf, :card, :date, :time, :price
+  validates :cpf, :card, :date, :time, :price, presence: true
 
   def self.ransackable_attributes(_auth_object = nil)
     %w[id cpf store_iq]
