@@ -27,6 +27,7 @@ Ler os dados de um [arquivo CNAB](https://github.com/ByCodersTec/desafio-ruby-on
 * factory_bot_rails
 * omniauth-github
 
+
 # Para rodar o app em localhost
 * Deve ter o docker e docker-compose instalado
 * No terminal digite
